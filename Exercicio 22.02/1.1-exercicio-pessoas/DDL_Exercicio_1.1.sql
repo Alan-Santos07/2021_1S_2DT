@@ -1,0 +1,31 @@
+-- DDL
+CREATE DATABASE Pessoas;
+
+USE Pessoas;
+
+CREATE TABLE Pessoas
+(
+	 idPessoas INT PRIMARY KEY IDENTITY
+	,Nome VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE Telefones
+(
+	 idTelefones INT PRIMARY KEY IDENTITY
+	,idPessoas INT FOREIGN KEY REFERENCES Pessoas(idPessoas)
+	,Numero VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE Emails
+(
+	 idEmails INT PRIMARY KEY IDENTITY
+	,idPessoas INT FOREIGN KEY REFERENCES Pessoas (idPessoas)
+	,Email VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE CNH
+(
+	 idCNH INT PRIMARY KEY IDENTITY
+	,idPessoas INT FOREIGN KEY REFERENCES Pessoas (idPessoas)
+	,CNH VARCHAR(200) NOT NULL
+);

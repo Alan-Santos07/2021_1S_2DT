@@ -1,0 +1,3 @@
+-- DQL
+USE Pessoas;
+
