@@ -41,7 +41,7 @@ CREATE TABLE ALugueis
 (
 		idAlugueis INT PRIMARY KEY IDENTITY
 	   ,idVeiculos INT FOREIGN KEY REFERENCES Veiculos(idVeiculos)
-	   ,idCllientes INT FOREIGN KEY REFERENCES Clientes(idClientes)
+	   ,idClientes INT FOREIGN KEY REFERENCES Clientes(idClientes)
 	   ,DataInicio DATE NOT NULL
 	   ,DataFim DATE NOT NULL
 );
