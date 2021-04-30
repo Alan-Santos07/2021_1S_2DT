@@ -39,3 +39,16 @@ CREATE TABLE ClassesHabilidades
 	,idHabilidades		INT FOREIGN KEY REFERENCES Habilidades(idHabilidades)
 );
 
+CREATE TABLE TiposUsuarios
+(
+	idTiposUsuarios INT PRIMARY KEY IDENTITY
+	,TiposUsuarios VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE Usuarios
+(
+	idUsuarios			INT PRIMARY KEY IDENTITY
+	,emailsUsuarios		VARCHAR(200) NOT NULL UNIQUE
+	,senhasUsuarios		VARCHAR(200) NOT NULL
+	,idTiposUsuarios	INT FOREIGN KEY REFERENCES TiposUsuarios(idTiposUsuarios)
+);

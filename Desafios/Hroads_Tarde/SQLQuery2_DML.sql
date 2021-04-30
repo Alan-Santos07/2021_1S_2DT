@@ -44,3 +44,11 @@ WHERE idPersonagem = 3;
 UPDATE Classes
 SET Cargos = 'Necromancer'
 WHERE idClasses = 5;
+
+INSERT INTO TiposUsuarios(TiposUsuarios)
+VALUES		('Jogador')
+		   ,('Administrador');
+
+INSERT INTO Usuarios(emailsUsuarios, senhasUsuarios, idTiposUsuarios)
+VALUES		('jogador@email.com', 'jogador123', 1)
+		   ,('adm@email.com', 'adm123', 2);
