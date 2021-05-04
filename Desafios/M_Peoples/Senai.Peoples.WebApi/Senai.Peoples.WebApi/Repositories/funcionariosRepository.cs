@@ -10,7 +10,7 @@ namespace Senai.Peoples.WebApi.Repositories
 {
     public class funcionariosRepository : IfuncionariosRepository
     {
-        private string stringConexao = "Data Source=LAB08DESK501\\SQLEXPRESS; initial catalog=M_Peoples; user Id=sa; pwd=senai@132";
+        private string stringConexao = "Data Source=DESKTOP-NQMUPH6\\SQLEXPRESS; initial catalog=M_Peoples; user Id=sa; pwd=senai@132";
         public void Atualizar(funcionarios mudanca)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
