@@ -10,18 +10,19 @@ namespace Senai.Peoples.WebApi.Repositories
 {
     public class funcionariosRepository : IfuncionariosRepository
     {
-        private string stringConexao = "Data Source=DESKTOP-NQMUPH6\\SQLEXPRESS; initial catalog=M_Peoples; user Id=sa; pwd=senai@132";
+        private string stringConexao = "Data Source=LAB08DESK501\\SQLEXPRESS; initial catalog=M_Peoples; user Id=sa; pwd=senai@132";
         public void Atualizar(funcionarios mudanca)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryUpdateIdBody = "UPDATE funcionarios SET nome = @nome WHERE idFuncionarios = @ID";
+                string queryUpdateIdBody = "UPDATE funcionarios SET nome = @nome, sobrenome = @sobrenome WHERE idFuncionarios = @ID";
 
                 using (SqlCommand cmd = new SqlCommand(queryUpdateIdBody, con))
                 {
 
                     cmd.Parameters.AddWithValue("@ID", mudanca.idFuncionarios);
                     cmd.Parameters.AddWithValue("@nome", mudanca.nome);
+                    cmd.Parameters.AddWithValue("@sobrenome", mudanca.sobrenome);
 
                     con.Open();
 
@@ -31,47 +32,11 @@ namespace Senai.Peoples.WebApi.Repositories
             } 
         }
 
-        public void AtualizarIdCorpo(funcionarios func)
-        {
-            using (SqlConnection con = new SqlConnection(stringConexao))
-            {
-                string queryUpdateIdBody = "UPDATE funcionarios SET nome = @nome WHERE idFuncionarios = @ID";
-
-                using (SqlCommand cmd = new SqlCommand(queryUpdateIdBody, con))
-                {
-                    cmd.Parameters.AddWithValue("@ID", func.idFuncionarios);
-                    cmd.Parameters.AddWithValue("@Nome", func.nome);
-
-                    con.Open();
-
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-
-        public void AtualizarIdUrl(int id, funcionarios func)
-        {
-            using (SqlConnection con = new SqlConnection(stringConexao))
-            {
-                string queryUpdateIdUrl = "UPDATE funcionarios SET nome = @nome WHERE idFuncionarios = @ID";
-
-                using (SqlCommand cmd = new SqlCommand(queryUpdateIdUrl, con))
-                {
-                    cmd.Parameters.AddWithValue("@ID", id);
-                    cmd.Parameters.AddWithValue("@Nome", func.nome);
-
-                    con.Open();
-
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-
         public funcionarios BuscarPorId(int id)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectById = "SELECT idFuncionarios, nome FROM funcionarios WHERE idFuncionarios = @ID";
+                string querySelectById = "SELECT idFuncionarios, nome, sobrenome FROM funcionarios WHERE idFuncionarios = @ID";
 
                 con.Open();
 
@@ -89,7 +54,8 @@ namespace Senai.Peoples.WebApi.Repositories
                         {
                             idFuncionarios = Convert.ToInt32(rdr["idFuncionarios"]),
 
-                            nome = rdr["nome"].ToString()
+                            nome = rdr["nome"].ToString(),
+                            sobrenome = rdr["sobrenome"].ToString()
                         };
 
                         return buscaFuncionarios;
@@ -105,11 +71,12 @@ namespace Senai.Peoples.WebApi.Repositories
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
                 
-                string queryInsert = "INSERT INTO funcionarios(nome) VALUES (@nome)";
+                string queryInsert = "INSERT INTO funcionarios(nome, sobrenome) VALUES (@nome, @sobrenome)";
 
                 using (SqlCommand cmd = new SqlCommand(queryInsert, con))
                 {
                     cmd.Parameters.AddWithValue("@nome", novoFuncionario.nome);
+                    cmd.Parameters.AddWithValue("@sobrenome", novoFuncionario.sobrenome);
 
                     con.Open();
 
@@ -141,7 +108,7 @@ namespace Senai.Peoples.WebApi.Repositories
 
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectAll = "SELECT idFuncionarios, nome FROM funcionarios";
+                string querySelectAll = "SELECT idFuncionarios, nome, sobrenome FROM funcionarios";
 
                 con.Open();
 
@@ -157,7 +124,8 @@ namespace Senai.Peoples.WebApi.Repositories
                         {
                             idFuncionarios = Convert.ToInt32(rdr[0]),
 
-                            nome = rdr[1].ToString()
+                            nome = rdr[1].ToString(),
+                            sobrenome = rdr[1].ToString()
                         };
 
                         listarFuncionarios.Add(mudanca);

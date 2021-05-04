@@ -17,9 +17,5 @@ namespace Senai.Peoples.WebApi.Interfaces
         void Atualizar(funcionarios mudanca);
 
         void Cadastrar(funcionarios novoFuncionario);
-
-        void AtualizarIdCorpo(funcionarios func);
-
-        void AtualizarIdUrl(int id, funcionarios func);
     }
 }

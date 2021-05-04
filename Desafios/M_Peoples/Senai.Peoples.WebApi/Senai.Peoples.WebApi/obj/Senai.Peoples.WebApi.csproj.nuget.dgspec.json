@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Trabalho\\Senai\\2021_1S_2DT\\Desafios\\M_Peoples\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj": {}
+    "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\Desafios\\M_Peoples\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Trabalho\\Senai\\2021_1S_2DT\\Desafios\\M_Peoples\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj": {
+    "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\Desafios\\M_Peoples\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Trabalho\\Senai\\2021_1S_2DT\\Desafios\\M_Peoples\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\Desafios\\M_Peoples\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj",
         "projectName": "Senai.Peoples.WebApi",
-        "projectPath": "D:\\Trabalho\\Senai\\2021_1S_2DT\\Desafios\\M_Peoples\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj",
-        "packagesPath": "C:\\Users\\alanc\\.nuget\\packages\\",
-        "outputPath": "D:\\Trabalho\\Senai\\2021_1S_2DT\\Desafios\\M_Peoples\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\obj\\",
+        "projectPath": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\Desafios\\M_Peoples\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi.csproj",
+        "packagesPath": "C:\\Users\\44711461817\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\Desafios\\M_Peoples\\Senai.Peoples.WebApi\\Senai.Peoples.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\44711461817\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

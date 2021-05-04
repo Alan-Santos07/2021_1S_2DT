@@ -67,4 +67,5 @@ CREATE TABLE consulta
 	   ,idSituacao INT FOREIGN KEY REFERENCES situacao(idSituacao)
 	   ,dataConsulta DATE NOT NULL
 	   ,horaConsulta VARCHAR(200) NOT NULL
+	   ,descricao VARCHAR (200) NOT NULL
 );

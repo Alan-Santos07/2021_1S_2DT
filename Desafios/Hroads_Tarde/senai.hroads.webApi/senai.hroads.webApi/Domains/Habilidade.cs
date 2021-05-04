@@ -9,5 +9,6 @@ namespace senai.hroads.webApi.Domains
     {
         public int IdHabilidades { get; set; }
         public string Tecnicas { get; set; }
+
     }
 }

@@ -13,7 +13,8 @@ namespace Sp_medical_group_tarde.Domains
         public int? IdSituacao { get; set; }
         public DateTime DataConsulta { get; set; }
         public string HoraConsulta { get; set; }
-
+        public string Descricao { get; set; }
+            
         public virtual Medico IdMedicoNavigation { get; set; }
         public virtual Paciente IdPacienteNavigation { get; set; }
         public virtual Situacao IdSituacaoNavigation { get; set; }

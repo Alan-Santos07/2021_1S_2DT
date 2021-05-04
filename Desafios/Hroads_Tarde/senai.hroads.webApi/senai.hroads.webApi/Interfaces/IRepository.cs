@@ -7,7 +7,6 @@ namespace senai.hroads.webApi.Interfaces
 {
     interface IRepository<T> where T : class
     {
-        // Classe genérica de teste, optei por não utilizar
         List<T> Listar();
 
         T BuscarPorId(int id);

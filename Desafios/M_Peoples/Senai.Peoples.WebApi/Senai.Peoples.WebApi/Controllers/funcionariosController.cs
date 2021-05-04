@@ -10,71 +10,60 @@ using System.Threading.Tasks;
 
 namespace Senai.Peoples.WebApi.Controllers
 {
-    public class funcionariosController
+    [Produces("application/json")]
+
+    [Route("api/[controller]")]
+
+    [ApiController]
+
+    public class funcionariosController : ControllerBase
     {
-        [Produces("application/json")]
+        private IfuncionariosRepository _funcionariosRepository { get; set; }
 
-        [Route("api/[controller]")]
-
-        [ApiController]
-
-        public class funcionariosControllers : ControllerBase
+        public funcionariosController()
         {
-            private IfuncionariosRepository _funcionariosRepository { get; set; }
+            _funcionariosRepository = new funcionariosRepository();
+        }   
 
-            public funcionariosControllers()
+        [HttpGet]
+        public IActionResult Get()
+        {
+            List<funcionarios> listarFuncionarios = _funcionariosRepository.Listar();
+
+            return Ok(listarFuncionarios);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            funcionarios funcionarioBuscado = _funcionariosRepository.BuscarPorId(id);
+
+            if (funcionarioBuscado == null)
             {
-                _funcionariosRepository = new funcionariosRepository();
-            }   
-
-            [HttpGet]
-            public IActionResult Get()
-            {
-                List<funcionarios> listarFuncionarios = _funcionariosRepository.Listar();
-
-                return Ok(listarFuncionarios);
+                return NotFound("Nenhum funcionário encontrado!");
             }
 
-            [HttpGet("{id}")]
-            public IActionResult GetById(int id)
+            return Ok(funcionarioBuscado);
+        }
+
+        [HttpPost]
+        public IActionResult Post(funcionarios novoFuncionario)
+        {
+            _funcionariosRepository.Cadastrar(novoFuncionario);
+
+            return StatusCode(201);
+        }
+
+        [HttpPut]
+        public IActionResult PutIdBody(funcionarios funcionariosAtualizado)
+        {
+            funcionarios funcionariosBuscado = _funcionariosRepository.BuscarPorId(funcionariosAtualizado.idFuncionarios);
+
+            if (funcionariosBuscado != null)
             {
-                funcionarios funcionarioBuscado = _funcionariosRepository.BuscarPorId(id);
-
-                if (funcionarioBuscado == null)
-                {
-                    return NotFound("Nenhum funcionário encontrado!");
-                }
-
-                return Ok(funcionarioBuscado);
-            }
-
-            [HttpPost]
-            public IActionResult Post(funcionarios novoFuncionario)
-            {
-                _funcionariosRepository.Cadastrar(novoFuncionario);
-
-                return StatusCode(201);
-            }
-            [HttpPut("{id}")]
-            public IActionResult PutIdUrl(int id, funcionarios funcionariosAtualizado)
-            {
-                funcionarios funcionariosBuscado = _funcionariosRepository.BuscarPorId(id);
-
-                if (funcionariosBuscado == null)
-                {
-                    return NotFound
-                        (
-                            new
-                            {
-                                mensagem = "Funcionario não encontrado!",
-                                erro = true
-                            }
-                        );
-                }
-
                 try
                 {
-                    _funcionariosRepository.AtualizarIdUrl(id, funcionariosAtualizado);
+                    _funcionariosRepository.Atualizar(funcionariosAtualizado);
 
                     return NoContent();
                 }
@@ -84,41 +73,21 @@ namespace Senai.Peoples.WebApi.Controllers
                 }
             }
 
-            [HttpPut]
-            public IActionResult PutIdBody(funcionarios funcionariosAtualizado)
-            {
-                funcionarios funcionariosBuscado = _funcionariosRepository.BuscarPorId(funcionariosAtualizado.idFuncionarios);
-
-                if (funcionariosBuscado != null)
-                {
-                    try
+            return NotFound
+                (
+                    new
                     {
-                        _funcionariosRepository.AtualizarIdCorpo(funcionariosAtualizado);
-
-                        return NoContent();
+                        mensagem = "Funcionario não encontrado!"
                     }
-                    catch (Exception codErro)
-                    {
-                        return BadRequest(codErro);
-                    }
-                }
-
-                return NotFound
-                    (
-                        new
-                        {
-                            mensagem = "Funcionario não encontrado!"
-                        }
-                    );
-            }
-
-            [HttpDelete("{id}")]
-            public IActionResult Delete(int id)
-            {
-                _funcionariosRepository.Deletar(id);
-
-                return StatusCode(204);
-            }
+                );
         }
-    }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _funcionariosRepository.Deletar(id);
+
+            return StatusCode(204);
+        }
+    }   
 }
