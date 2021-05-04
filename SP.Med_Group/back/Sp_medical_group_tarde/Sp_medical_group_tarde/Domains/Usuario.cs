@@ -14,7 +14,7 @@ namespace Sp_medical_group_tarde.Domains
         }
 
         public int IdUsuario { get; set; }
-        public int? IdTiposUsuarios { get; set; }
+        public int IdTiposUsuarios { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
 
