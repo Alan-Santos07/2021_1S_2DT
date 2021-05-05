@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -16,6 +17,8 @@ namespace Sp_medical_group_tarde.Domains
         public int IdUsuario { get; set; }
         public int IdTiposUsuarios { get; set; }
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "O campo Senha deve ser informado!")]
         public string Senha { get; set; }
 
         public virtual TiposUsuario IdTiposUsuariosNavigation { get; set; }

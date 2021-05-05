@@ -15,11 +15,11 @@ namespace Sp_medical_group_tarde.Interfaces
         void Cadastrar(Consultum novoConsultum);
 
         void Atualizar(int id, Consultum ConsultumAtualizado);
-
+            
         void Deletar(int id);
 
         List<Consultum> Minhas(int idUsuario);
 
-        void Permissao(int id, Consultum ConsultumPermissao);
+        void AlterStatus(int id, string ConsultumPermissao);
     }
 }

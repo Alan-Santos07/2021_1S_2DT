@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Trabalho\\Senai\\2021_1S_2DT\\SP.Med_Group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj": {}
+    "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\SP.Med_Group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj": {}
   },
   "projects": {
-    "D:\\Trabalho\\Senai\\2021_1S_2DT\\SP.Med_Group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj": {
+    "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\SP.Med_Group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Trabalho\\Senai\\2021_1S_2DT\\SP.Med_Group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
+        "projectUniqueName": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\SP.Med_Group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
         "projectName": "Sp_medical_group_tarde",
-        "projectPath": "D:\\Trabalho\\Senai\\2021_1S_2DT\\SP.Med_Group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
-        "packagesPath": "C:\\Users\\alanc\\.nuget\\packages\\",
-        "outputPath": "D:\\Trabalho\\Senai\\2021_1S_2DT\\SP.Med_Group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\obj\\",
+        "projectPath": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\SP.Med_Group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
+        "packagesPath": "C:\\Users\\44711461817\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\SP.Med_Group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\44711461817\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,7 +50,7 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer.Design": {
               "target": "Package",
@@ -60,7 +60,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
