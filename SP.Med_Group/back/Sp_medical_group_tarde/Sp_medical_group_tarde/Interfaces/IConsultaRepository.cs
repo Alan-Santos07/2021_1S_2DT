@@ -21,5 +21,7 @@ namespace Sp_medical_group_tarde.Interfaces
         List<Consultum> Minhas(int idUsuario);
 
         void AlterStatus(int id, string ConsultumPermissao);
+
+        void Prontuario(int id, Consultum novoProntuario);
     }
 }

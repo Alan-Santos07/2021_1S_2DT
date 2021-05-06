@@ -43,7 +43,12 @@ namespace Sp_medical_group_tarde.Repositories
 
             if (ConsultumAtualizado.Descricao != null)
             {
-                ConsultumBuscado.Descricao = ConsultumAtualizado.Descricao;
+                ConsultumBuscado.Descricao = ConsultumBuscado.Descricao;
+            }
+
+            if (ConsultumAtualizado.Descricao == null)
+            {
+                ConsultumBuscado.Descricao = ConsultumBuscado.Descricao;
             }
 
             ctx.Consulta.Update(ConsultumBuscado);
@@ -121,6 +126,20 @@ namespace Sp_medical_group_tarde.Repositories
                 default:
                     ConsultumBuscado.IdSituacao = ConsultumBuscado.IdSituacao;
                     break;
+            }
+
+            ctx.Consulta.Update(ConsultumBuscado);
+
+            ctx.SaveChanges();
+        }
+
+        public void Prontuario(int id, Consultum novoProntuario)
+        {
+            Consultum ConsultumBuscado = ctx.Consulta.Find(id);
+
+            if (novoProntuario.Descricao != null)
+            {
+                ConsultumBuscado.Descricao = novoProntuario.Descricao;
             }
 
             ctx.Consulta.Update(ConsultumBuscado);
