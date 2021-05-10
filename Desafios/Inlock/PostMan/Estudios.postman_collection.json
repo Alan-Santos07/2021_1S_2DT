@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "e1fba2a5-5084-40b3-be59-4bd4c9c3e23c",
+		"name": "Estudios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Estudio.Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Estudios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Estudios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudio.BuscarPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Estudios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Estudios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudio.Cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NomeEstudio\": \"EA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Estudios/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Estudios",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudio.Deletar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Estudios/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Estudios",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudio.Atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NomeEstudio\": \"Ea\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Estudios/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Estudios",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudio.ListarJogos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Estudios/jogos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Estudios",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
