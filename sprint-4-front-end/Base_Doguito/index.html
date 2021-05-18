@@ -7,7 +7,8 @@
     </head>
     <body>
         <h1>SITE DE DOGUINHOS</h1>
-        <div id="dog1">
+        <section class="container">
+            <div id="dog1">
             <img class="imagem1" src="Ibageins/2.jpeg" alt="Sammy"/> 
             <h2>Sammy</h2>
         </div>
@@ -33,7 +34,7 @@
             <input id="btn" type="button" value="Soma todas as Idades" onclick="idadeSoma()"/> <!-- Reduce -->
             <input id="btn" type="button" value="Piorar Site" onclick="mudaTudo()"/>
         </div>
-
+        </section>
         <script> 
         dogs = [
             {
@@ -93,7 +94,91 @@
 
                 alert(`O resultado da soma das idades dos Dogs é ${alanzitos} anos.`);
             }
-            
+
+            //Botão Piorar Site
+            function mudaTudo()
+            {
+                //BODY
+                document.getElementsByTagName("body")[0].style.backgroundImage = "none"
+                document.getElementsByTagName("body")[0].style.display = "flex"
+                document.getElementsByTagName("body")[0].style.justifyContent = "center"
+                document.getElementsByTagName("body")[0].style.alignItems = "center"
+                document.getElementsByTagName("body")[0].style.flexDirection = "column"
+                
+
+                //H1
+                document.getElementsByTagName("h1")[0].innerHTML = "WEB GATOS"
+                document.getElementsByTagName("h1")[0].style.color = "#060F25"
+                document.getElementsByTagName("h1")[0].style.backgroundColor = "#B578CF"
+                document.getElementsByTagName("h1")[0].style.width = "540px"
+                document.getElementsByTagName("h1")[0].style.paddingTop = "20px"
+                document.getElementsByTagName("h1")[0].style.paddingBottom = "20px"
+
+                //CARD 01
+                document.getElementById("dog1").getElementsByTagName("h2")[0].innerHTML = "ALAN"
+                document.getElementById("dog1").getElementsByTagName("h2")[0].style.fontSize = "64px"
+                document.getElementById("dog1").getElementsByTagName("h2")[0].style.color = "#060F25"
+                document.getElementById("dog1").style.backgroundColor = "#FBF0FF"
+                document.getElementById("dog1").style.width = "500px"
+                document.getElementById("dog1").style.height = "500px"
+                document.getElementById("dog1").getElementsByTagName("img")[0].style.width = "416px"
+                document.getElementById("dog1").getElementsByTagName("img")[0].style.height = "360px"
+                document.getElementById("dog1").getElementsByTagName("img")[0].style.paddingTop = "35px"
+
+                //CARD 02
+                document.getElementById("dog2").getElementsByTagName("h2")[0].innerHTML = "LINGUINHA"
+                document.getElementById("dog2").getElementsByTagName("h2")[0].style.fontSize = "64px"
+                document.getElementById("dog2").getElementsByTagName("h2")[0].style.color = "#060F25"
+                document.getElementById("dog2").style.backgroundColor = "#FBF0FF"
+                document.getElementById("dog2").style.width = "500px"
+                document.getElementById("dog2").style.height = "500px"
+                document.getElementById("dog2").getElementsByTagName("img")[0].style.width = "416px"
+                document.getElementById("dog2").getElementsByTagName("img")[0].style.height = "360px"
+                document.getElementById("dog2").getElementsByTagName("img")[0].style.paddingTop = "35px"
+
+                //CARD 03
+                document.getElementById("dog3").getElementsByTagName("h2")[0].innerHTML = "REBAIXADO"
+                document.getElementById("dog3").getElementsByTagName("h2")[0].style.fontSize = "64px"
+                document.getElementById("dog3").getElementsByTagName("h2")[0].style.color = "#060F25"
+                document.getElementById("dog3").style.backgroundColor = "#FBF0FF"
+                document.getElementById("dog3").style.width = "500px"
+                document.getElementById("dog3").style.height = "500px"
+                document.getElementById("dog3").getElementsByTagName("img")[0].style.width = "416px"
+                document.getElementById("dog3").getElementsByTagName("img")[0].style.height = "360px"
+                document.getElementById("dog3").getElementsByTagName("img")[0].style.paddingTop = "35px"
+
+                //CARD 04
+                document.getElementById("dog4").getElementsByTagName("h2")[0].innerHTML = "NYAN GATO"
+                document.getElementById("dog4").getElementsByTagName("h2")[0].style.fontSize = "64px"
+                document.getElementById("dog4").getElementsByTagName("h2")[0].style.color = "#060F25"
+                document.getElementById("dog4").style.backgroundColor = "#FBF0FF"
+                document.getElementById("dog4").style.width = "500px"
+                document.getElementById("dog4").style.height = "500px"
+                document.getElementById("dog4").getElementsByTagName("img")[0].style.width = "416px"
+                document.getElementById("dog4").getElementsByTagName("img")[0].style.height = "360px"
+                document.getElementById("dog4").getElementsByTagName("img")[0].style.paddingTop = "35px"
+
+                //CARD 05
+                document.getElementById("dog5").getElementsByTagName("h2")[0].innerHTML = "EL GORDO"
+                document.getElementById("dog5").getElementsByTagName("h2")[0].style.fontSize = "64px"
+                document.getElementById("dog5").getElementsByTagName("h2")[0].style.color = "#060F25"
+                document.getElementById("dog5").style.backgroundColor = "#FBF0FF"
+                document.getElementById("dog5").style.width = "500px"
+                document.getElementById("dog5").style.height = "500px"
+                document.getElementById("dog5").getElementsByTagName("img")[0].style.width = "416px"
+                document.getElementById("dog5").getElementsByTagName("img")[0].style.height = "360px"
+                document.getElementById("dog5").getElementsByTagName("img")[0].style.paddingTop = "35px"
+
+                //FOTOS
+                document.querySelector("#dog1").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/alan.jpg")
+                document.querySelector("#dog2").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/linguinha.jpeg")
+                document.querySelector("#dog3").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/rebaixado.jpg")
+                document.querySelector("#dog4").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/nyan_gato.jpg")
+                document.querySelector("#dog5").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/el_gordo.jpg")
+
+                return alert(`Bem Vindo ao melhor Site de Gatinhos`)
+            }
+
         </script> 
     </body>
 </html>
