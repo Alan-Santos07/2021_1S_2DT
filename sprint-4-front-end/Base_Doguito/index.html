@@ -5,36 +5,40 @@
         <link rel="stylesheet" type="text/css" href="styles.css" /> 
         <title>Doguitos</title> 
     </head>
-    <body>
+    <body id="corpo">
         <h1>SITE DE DOGUINHOS</h1>
+        <audio src="Ibageins/gato.mp3"></audio>
         <section class="container">
             <div id="dog1">
             <img class="imagem1" src="Ibageins/2.jpeg" alt="Sammy"/> 
             <h2>Sammy</h2>
-        </div>
-        <div id="dog2">
-            <img class="imagem2" src="Ibageins/3.jpeg" alt="Dragão"/> 
-            <h2>Dragão</h2>
-        </div>
-        <div id="dog3">
-            <img class="imagem3" src="Ibageins/4.jpeg" alt="Milton"/> 
-            <h2>Milton</h2>
-        </div>
-        <div id="dog4">
-            <img class="imagem4" src="Ibageins/5.jpeg" alt="Penny"/> 
-            <h2>Penny</h2>
-        </div>
-        <div id="dog5">
-            <img class="imagem5" src="Ibageins/6.jpeg" alt="Nenem"/> 
-            <h2>Nenem</h2>
-        </div>
-        <div id="botauns">
-            <input id="btn" type="button" value="Nome dos Spitz" onclick="soSpitz()"/> <!--Filter  -->
-            <input id="btn" type="button" value="Idade" onclick="idadeReal()"/> <!-- Map -->
-            <input id="btn" type="button" value="Soma todas as Idades" onclick="idadeSoma()"/> <!-- Reduce -->
-            <input id="btn" type="button" value="Piorar Site" onclick="mudaTudo()"/>
-        </div>
+            </div>
+            <div id="dog2">
+                <img class="imagem2" src="Ibageins/3.jpeg" alt="Dragão"/> 
+                <h2>Dragão</h2>
+            </div>
+            <div id="dog3">
+                <img class="imagem3" src="Ibageins/4.jpeg" alt="Milton"/> 
+                <h2>Milton</h2>
+            </div>
+            <div id="dog4">
+                <img class="imagem4" src="Ibageins/5.jpeg" alt="Penny"/> 
+                <h2>Penny</h2>
+            </div>
+            <div id="dog5">
+                <img class="imagem5" src="Ibageins/6.jpeg" alt="Nenem"/> 
+                <h2>Nenem</h2>
+            </div>
         </section>
+        <section class="botoes">
+            <div id="botauns">
+                <input id="btn" type="button" value="Nome" onclick="soSpitz()"/> <!--Filter  -->
+                <input id="btn" type="button" value="Idade" onclick="idadeReal()"/> <!-- Map -->
+                <input id="btn" type="button" value="Idade Total" onclick="idadeSoma()"/> <!-- Reduce -->
+                <input id="btn" type="button" value="Piorar Site" onclick="mudaTudo()"/>
+            </div>
+        </section>
+                       
         <script> 
         dogs = [
             {
@@ -99,28 +103,87 @@
             function mudaTudo()
             {
                 //BODY
-                document.getElementsByTagName("body")[0].style.backgroundImage = "none"
-                document.getElementsByTagName("body")[0].style.display = "flex"
-                document.getElementsByTagName("body")[0].style.justifyContent = "center"
-                document.getElementsByTagName("body")[0].style.alignItems = "center"
-                document.getElementsByTagName("body")[0].style.flexDirection = "column"
+                document.getElementsByTagName("body")[0].style.display = "flex"                 
+                document.getElementsByTagName("body")[0].style.justifyContent = "center"        
+                document.getElementsByTagName("body")[0].style.alignItems = "center"            
+                document.getElementsByTagName("body")[0].style.flexDirection = "column"         
+                document.getElementsByTagName("body")[0].style.backgroundColor = "#716F70"      
+
+                document.body.style.backgroundImage = "url('Ibageins/gay.png')"             
+                document.body.style.backgroundPosition = "right 50% bottom 50%"             
                 
+                //CONTAINER
+                document.getElementsByClassName("container")[0].style.width = "1200px"          
+                document.getElementsByClassName("container")[0].style.flexWrap = "wrap"
+                document.getElementsByClassName("container")[0].style.alignItems = "center"
+                document.getElementsByClassName("container")[0].style.display = "flex"
+                document.getElementsByClassName("container")[0].style.justifyContent = "space-between"
 
                 //H1
                 document.getElementsByTagName("h1")[0].innerHTML = "WEB GATOS"
                 document.getElementsByTagName("h1")[0].style.color = "#060F25"
-                document.getElementsByTagName("h1")[0].style.backgroundColor = "#B578CF"
+                document.getElementsByTagName("h1")[0].style.backgroundColor = "#975CF8"  
                 document.getElementsByTagName("h1")[0].style.width = "540px"
                 document.getElementsByTagName("h1")[0].style.paddingTop = "20px"
                 document.getElementsByTagName("h1")[0].style.paddingBottom = "20px"
+                document.getElementsByTagName("h1")[0].style.fontSize = "64px"
+                document.getElementsByTagName("h1")[0].style.fontFamily = "Gugi, cursive"
+                document.getElementsByTagName("h1")[0].style.boxShadow = "0 0 150px #975CF8"
+
+                //BOTÕES
+                document.getElementById("botauns").style.justifyContent = "space-between"
+                document.getElementById("botauns").style.display = "flex"
+
+                document.getElementsByClassName("botoes")[0].style.width = "1105px"
+                document.getElementsByClassName("botoes")[0].style.marginBottom = "50px"
+                document.getElementsByClassName("botoes")[0].style.marginTop = "20px"
+
+                document.getElementsByTagName("input")[0].style.height = "108px"
+                document.getElementsByTagName("input")[1].style.height = "108px"
+                document.getElementsByTagName("input")[2].style.height = "108px"
+                document.getElementsByTagName("input")[3].style.height = "108px"
+
+                document.getElementsByTagName("input")[0].style.width = "204px"
+                document.getElementsByTagName("input")[1].style.width = "204px"
+                document.getElementsByTagName("input")[2].style.width = "204px"
+                document.getElementsByTagName("input")[3].style.width = "204px"
+
+                document.getElementsByTagName("input")[0].style.backgroundColor = "#E90D0D"
+                document.getElementsByTagName("input")[1].style.backgroundColor = "#FDFF41"
+                document.getElementsByTagName("input")[2].style.backgroundColor = "#49FFFC"
+                document.getElementsByTagName("input")[3].style.backgroundColor = "#88FF70"
+
+                document.getElementsByTagName("input")[0].style.fontFamily = "Righteous, cursive"
+                document.getElementsByTagName("input")[1].style.fontFamily = "Righteous, cursive"
+                document.getElementsByTagName("input")[2].style.fontFamily = "Righteous, cursive"
+                document.getElementsByTagName("input")[3].style.fontFamily = "Righteous, cursive"
+
+                document.getElementsByTagName("input")[0].style.fontSize = "32px"
+                document.getElementsByTagName("input")[1].style.fontSize = "32px"
+                document.getElementsByTagName("input")[2].style.fontSize = "32px"
+                document.getElementsByTagName("input")[3].style.fontSize = "32px"
+
+                document.getElementsByTagName("input")[0].style.boxShadow = "0 0 150px #E90D0D"
+                document.getElementsByTagName("input")[1].style.boxShadow = "0 0 150px #FDFF41"
+                document.getElementsByTagName("input")[2].style.boxShadow = "0 0 150px #49FFFC"
+                document.getElementsByTagName("input")[3].style.boxShadow = "0 0 150px #88FF70"
+
+                document.getElementsByTagName("input")[0].style.border = "none"
+                document.getElementsByTagName("input")[1].style.border = "none"
+                document.getElementsByTagName("input")[2].style.border = "none"
+                document.getElementsByTagName("input")[3].style.border = "none"
 
                 //CARD 01
                 document.getElementById("dog1").getElementsByTagName("h2")[0].innerHTML = "ALAN"
                 document.getElementById("dog1").getElementsByTagName("h2")[0].style.fontSize = "64px"
                 document.getElementById("dog1").getElementsByTagName("h2")[0].style.color = "#060F25"
+                document.getElementById("dog1").getElementsByTagName("h2")[0].style.margin = "0"
+                document.getElementById("dog1").getElementsByTagName("h2")[0].style.paddingTop = "15px"
+                document.getElementById("dog1").getElementsByTagName("h2")[0].style.fontFamily = "Righteous, cursive"
                 document.getElementById("dog1").style.backgroundColor = "#FBF0FF"
                 document.getElementById("dog1").style.width = "500px"
                 document.getElementById("dog1").style.height = "500px"
+                document.getElementById("dog1").style.margin = "50px"
                 document.getElementById("dog1").getElementsByTagName("img")[0].style.width = "416px"
                 document.getElementById("dog1").getElementsByTagName("img")[0].style.height = "360px"
                 document.getElementById("dog1").getElementsByTagName("img")[0].style.paddingTop = "35px"
@@ -129,9 +192,13 @@
                 document.getElementById("dog2").getElementsByTagName("h2")[0].innerHTML = "LINGUINHA"
                 document.getElementById("dog2").getElementsByTagName("h2")[0].style.fontSize = "64px"
                 document.getElementById("dog2").getElementsByTagName("h2")[0].style.color = "#060F25"
+                document.getElementById("dog2").getElementsByTagName("h2")[0].style.margin = "0"
+                document.getElementById("dog2").getElementsByTagName("h2")[0].style.paddingTop = "15px"
+                document.getElementById("dog2").getElementsByTagName("h2")[0].style.fontFamily = "Righteous, cursive"
                 document.getElementById("dog2").style.backgroundColor = "#FBF0FF"
                 document.getElementById("dog2").style.width = "500px"
                 document.getElementById("dog2").style.height = "500px"
+                document.getElementById("dog2").style.margin = "50px"
                 document.getElementById("dog2").getElementsByTagName("img")[0].style.width = "416px"
                 document.getElementById("dog2").getElementsByTagName("img")[0].style.height = "360px"
                 document.getElementById("dog2").getElementsByTagName("img")[0].style.paddingTop = "35px"
@@ -140,9 +207,13 @@
                 document.getElementById("dog3").getElementsByTagName("h2")[0].innerHTML = "REBAIXADO"
                 document.getElementById("dog3").getElementsByTagName("h2")[0].style.fontSize = "64px"
                 document.getElementById("dog3").getElementsByTagName("h2")[0].style.color = "#060F25"
+                document.getElementById("dog3").getElementsByTagName("h2")[0].style.margin = "0"
+                document.getElementById("dog3").getElementsByTagName("h2")[0].style.paddingTop = "15px"
+                document.getElementById("dog3").getElementsByTagName("h2")[0].style.fontFamily = "Righteous, cursive"
                 document.getElementById("dog3").style.backgroundColor = "#FBF0FF"
                 document.getElementById("dog3").style.width = "500px"
                 document.getElementById("dog3").style.height = "500px"
+                document.getElementById("dog3").style.margin = "50px"
                 document.getElementById("dog3").getElementsByTagName("img")[0].style.width = "416px"
                 document.getElementById("dog3").getElementsByTagName("img")[0].style.height = "360px"
                 document.getElementById("dog3").getElementsByTagName("img")[0].style.paddingTop = "35px"
@@ -151,9 +222,13 @@
                 document.getElementById("dog4").getElementsByTagName("h2")[0].innerHTML = "NYAN GATO"
                 document.getElementById("dog4").getElementsByTagName("h2")[0].style.fontSize = "64px"
                 document.getElementById("dog4").getElementsByTagName("h2")[0].style.color = "#060F25"
+                document.getElementById("dog4").getElementsByTagName("h2")[0].style.margin = "0"
+                document.getElementById("dog4").getElementsByTagName("h2")[0].style.paddingTop = "15px"
+                document.getElementById("dog4").getElementsByTagName("h2")[0].style.fontFamily = "Righteous, cursive"
                 document.getElementById("dog4").style.backgroundColor = "#FBF0FF"
                 document.getElementById("dog4").style.width = "500px"
                 document.getElementById("dog4").style.height = "500px"
+                document.getElementById("dog4").style.margin = "50px"
                 document.getElementById("dog4").getElementsByTagName("img")[0].style.width = "416px"
                 document.getElementById("dog4").getElementsByTagName("img")[0].style.height = "360px"
                 document.getElementById("dog4").getElementsByTagName("img")[0].style.paddingTop = "35px"
@@ -162,21 +237,27 @@
                 document.getElementById("dog5").getElementsByTagName("h2")[0].innerHTML = "EL GORDO"
                 document.getElementById("dog5").getElementsByTagName("h2")[0].style.fontSize = "64px"
                 document.getElementById("dog5").getElementsByTagName("h2")[0].style.color = "#060F25"
+                document.getElementById("dog5").getElementsByTagName("h2")[0].style.margin = "0"
+                document.getElementById("dog5").getElementsByTagName("h2")[0].style.paddingTop = "15px"
+                document.getElementById("dog5").getElementsByTagName("h2")[0].style.fontFamily = "Righteous, cursive"
                 document.getElementById("dog5").style.backgroundColor = "#FBF0FF"
                 document.getElementById("dog5").style.width = "500px"
                 document.getElementById("dog5").style.height = "500px"
+                document.getElementById("dog5").style.margin = "50px"
+                document.getElementById("dog5").style.marginLeft = "350px"
                 document.getElementById("dog5").getElementsByTagName("img")[0].style.width = "416px"
                 document.getElementById("dog5").getElementsByTagName("img")[0].style.height = "360px"
                 document.getElementById("dog5").getElementsByTagName("img")[0].style.paddingTop = "35px"
 
                 //FOTOS
-                document.querySelector("#dog1").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/alan.jpg")
+                document.querySelector("#dog1").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/arcogato.gif")
                 document.querySelector("#dog2").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/linguinha.jpeg")
                 document.querySelector("#dog3").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/rebaixado.jpg")
-                document.querySelector("#dog4").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/nyan_gato.jpg")
+                document.querySelector("#dog4").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/nyan.gif")
                 document.querySelector("#dog5").getElementsByTagName("img")[0].setAttribute("src", "Ibageins/el_gordo.jpg")
 
-                return alert(`Bem Vindo ao melhor Site de Gatinhos`)
+                var audio = document.querySelector("audio") 
+                audio.play() 
             }
 
         </script> 
