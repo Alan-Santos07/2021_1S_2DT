@@ -17,16 +17,6 @@ class Relogio extends React.Component
     }
   }
 
-  render()
-  {
-    return(
-    <div>
-      <h1> Hora de Aventura </h1>
-      <Hora date={this.state.date} />
-    </div>
-    ) 
-  }
-
   componentDidMount()
   {
     this.timerID = setInterval( () => 
@@ -49,11 +39,30 @@ class Relogio extends React.Component
     )
   }
 
-  pausar()
-  {
-    this.state
+  pausar() {    
+    console.log(`Relógio ${this.timerID} pausado!`)
+    clearInterval(this.timerID)
   }
-  
+
+  voltar()
+  {
+    this.tempoID = setInterval( () => 
+    {
+      this.ticTac()
+    }, 1000)
+    console.log(`Relógio ${this.timerID} retomado! Agora eu sou o Relógio ${this.tempoID}`)
+  }
+
+  render()
+  {
+    return(
+    <div>
+      <h1> Relógio Mágico </h1>
+      <Hora date={this.state.date} />
+      <button onClick={() => this.pausar()} > Pausar Relógio {this.timerID} </button>
+    </div>
+    ) 
+  }
 
 }
 
@@ -62,10 +71,8 @@ function App()
   return(
     <div className="App">
       <header className="App-header">
+        <Relogio />        
         <Relogio />
-        <input id='btn' type='button' value='Parar o Tempo' onclick={componentWillUnmount()}/>
-        <Relogio />
-        <input id='btn' type='button' value='Parar o Tempo' onclick={componentWillUnmount()}/>
       </header>
     </div>
   );
