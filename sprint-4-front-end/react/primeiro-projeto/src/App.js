@@ -46,11 +46,11 @@ class Relogio extends React.Component
 
   voltar()
   {
-    this.tempoID = setInterval( () => 
+    this.timerID = setInterval( () => 
     {
       this.ticTac()
     }, 1000)
-    console.log(`Relógio ${this.timerID} retomado! Agora eu sou o Relógio ${this.tempoID}`)
+    console.log(`Relógio ${this.timerID} retomado! Agora eu sou o Relógio ${this.timerID}`)
   }
 
   render()
@@ -59,7 +59,30 @@ class Relogio extends React.Component
     <div>
       <h1> Relógio Mágico </h1>
       <Hora date={this.state.date} />
-      <button onClick={() => this.pausar()} > Pausar Relógio {this.timerID} </button>
+      <button onClick={() => this.pausar()} 
+        style=
+        {{
+          color: "#FFF5F7", 
+          backgroundColor: "#FF4242",
+          fontWeight: "600",
+          margin: "20px",
+          padding: "10px 10px",
+          border: "none",
+          outline: "none",
+        }}
+      > Pausar Relógio {this.timerID}  </button>
+      <button onClick={() => this.voltar()}
+      style=
+      {{
+        color: "#FFF5F7", 
+        backgroundColor: "#338F4D",
+        fontWeight: "600",
+        margin: "20px",
+        padding: "10px 10px",
+        border: "none",
+        outline: "none",
+      }}
+      > Retomar Relógio {this.timerID} </button>
     </div>
     ) 
   }
