@@ -20,6 +20,7 @@ namespace Sp_medical_group_tarde.Domains
 
         [Required(ErrorMessage = "O campo Senha deve ser informado!")]
         public string Senha { get; set; }
+        public string Nome { get; set; }
 
         public virtual TiposUsuario IdTiposUsuariosNavigation { get; set; }
         public virtual ICollection<Medico> Medicos { get; set; }

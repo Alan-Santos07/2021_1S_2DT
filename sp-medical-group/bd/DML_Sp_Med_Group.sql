@@ -6,17 +6,18 @@ VALUES		('Administrador')
 		   ,('Medico')
 		   ,('Paciente');
 
-INSERT INTO usuarios(idTiposUsuarios, email, senha)
-VALUES		(2, 'ricardo.lemos@spmedicalgroup.com.br', 'lemos123') -- 01
-		   ,(2, 'roberto.possarle@spmedicalgroup.com.br', 'possarle123') -- 02
-		   ,(2, 'helena.souza@spmedicalgroup.com.br', 'helena123') -- 03
-		   ,(3, 'ligia@gmail.com', 'ligia123') -- 04
-		   ,(3, 'alexandre@gmail.com', 'alexandre123') -- 05
-		   ,(3, 'fernando@gmail.com', 'fernando123') -- 06
-		   ,(3, 'henrique@gmail.com', 'henrique123') -- 07
-		   ,(3, 'joao@hotmail.com', 'joao123') -- 08
-		   ,(3, 'bruno@gmail.com', 'bruno123') -- 09
-		   ,(3, 'mariana@outlook.com', 'mariana123') -- 10
+INSERT INTO usuarios(idTiposUsuarios, email, senha, nome)
+VALUES		(2, 'ricardo.lemos@spmedicalgroup.com.br', 'lemos123', 'Ricardo Lemos') -- 01
+		   ,(2, 'roberto.possarle@spmedicalgroup.com.br', 'possarle123', 'Roberto Possarle') -- 02
+		   ,(2, 'helena.souza@spmedicalgroup.com.br', 'helena123', 'Helena Souza') -- 03
+		   ,(3, 'ligia@gmail.com', 'ligia123', 'Ligia') -- 04
+		   ,(3, 'alexandre@gmail.com', 'alexandre123', 'Alexandre') -- 05
+		   ,(3, 'fernando@gmail.com', 'fernando123', 'Fernando') -- 06
+		   ,(3, 'henrique@gmail.com', 'henrique123', 'Henrique') -- 07
+		   ,(3, 'joao@hotmail.com', 'joao123', 'João') -- 08
+		   ,(3, 'bruno@gmail.com', 'bruno123', 'Bruno') -- 09
+		   ,(3, 'mariana@outlook.com', 'mariana123', 'Mariana') -- 10
+		   ,(1, 'adm@adm', 'adm123', 'Alan') -- 11
 
 INSERT INTO paciente(idUsuario, dataNascimento, endereco, rg, cpf, telefone)
 VALUES		(4, '13/10/1983', 'Rua Estado de Israel 240, São Paulo, Estado de São Paulo, 04022-000', '43522543-5', '94839859000', '11 3456-7654') -- 1

@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+    /* font-family: 'moderna', sans-serif; */
+    
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url("../img/bola.png");
+    background-repeat: no-repeat;
+    background-position: right -17% bottom 20%;
+}
+
+header{
+    background-color: #55C595;
+    display: flex;
+    max-width: 100%;
+    height: 100px;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+}
+
+.cabeca{
+    margin-left: 5%;
+    background-color: #55C595;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+}
+
+.user{
+    margin-right: 5%;
+    background-color: #55C595;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+}
+
+.ibagem{
+    width: 190px;
+    height: 75px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.logo{
+    background-color: #55C595;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.logo:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.listar-cabeca, .sair{
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: #55C595;
+    color: #F9FFF9;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.listar-cabeca:hover, .sair:hover{
+    color: #1A4E27;
+    text-decoration: none;
+    border-bottom: solid;
+    border-bottom-width: 4px;
+    transition: 0.5s;
+}
+
+.user p{
+    color: #071D2C;
+    margin-left: 40px;
+    margin-right: 20px;
+    background-color: #55C595;
+    font-size: 24px;
+    border-bottom: solid;
+    border-bottom-width: 4px;
+}
+
+.user img{
+    margin-left: 40px;
+    background-color: #C4C4C4;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.container{
+    display: flex;
+    margin: 50px 5%;
+    justify-content: space-between;
+}
+
+.esquerda{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    background-color: #51B7B8;
+    border-radius: 15px 15px 15px 15px;
+    width: 640px;
+    height: 843px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.titulo{
+    background-color: #51B7B8;
+    margin-left: 40px;
+}
+
+.titulo h3{
+    color: #071D2C;
+    font-size: 30px;
+    background-color: #51B7B8;
+    margin-top: 20px;
+}
+
+.titulo hr{
+    width: 100px;
+    margin-top: 3px;
+    border: 2px solid #071D2C;
+}
+
+.campo{
+    background-color: #51B7B8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0;
+    position: relative;
+}
+
+#setinha{
+    width: 46px;
+    height: 23px;
+    position: absolute;
+    right: 0;
+    background-color: #F9FFF9;
+    margin: 0 20px;
+}
+
+.campo img{
+    width: 81px;
+    height: 81px;
+    background-color: #51B7B8;
+}
+
+.selecao{
+    width: 414px;
+    height: 72px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #F9FFF9;
+    margin-left: 20px;
+
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding-left: 20px;
+    transition: all 0.25s;
+
+    position: relative;
+}
+
+.selecao:hover, .selecao:focus {
+    transition: 0.25s;
+    border: 3px solid #071D2C;
+}
+
+.campo:hover #setinha{
+    animation: bounce 2s ease infinite;
+    transition: all;
+}
+
+.selecao:focus{
+    outline: none;
+}
+
+
+@keyframes bounce{
+    0%, 25%, 55%, 75%, 100%{
+        transform: translateY(0);
+    }
+    45%{
+        transform: translateY(-10px);
+    }
+    65%{
+        transform: translateY(-6px);
+    }
+    85%{
+        transform: translateY(-3px);
+    }
+}
+
+.campo input{
+    width: 414px;
+    height: 72px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #F9FFF9;
+    margin-left: 20px;
+    border-style: none;
+    box-sizing: border-box;
+
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.25s;
+}
+
+.morra:hover, .morra:focus {
+    transition: 0.25s;
+    border: 3px solid #071D2C;
+}
+
+.morra:focus{
+    outline: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator, 
+input[type="time"]::-webkit-calendar-picker-indicator{
+
+    width: 30%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-datetime-edit,
+input[type="time"]::-webkit-datetime-edit {
+
+    padding-left: 20px; 
+}
+
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="time"]::-webkit-datetime-edit-text {
+
+    padding: 0 10px;
+}
+
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="time"]::-webkit-datetime-edit-month-field {
+
+    text-transform: uppercase;;
+}
+
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="time"]::-webkit-datetime-edit-day-field {
+
+    text-transform: uppercase;;
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field,
+input[type="time"]::-webkit-datetime-edit-year-field {
+
+    text-transform: uppercase;;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+    background-color: #51B7B8;
+}
+
+.botao button{
+    width: 550px;
+    height: 102px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #071D2C;
+    color: #F9FFF9;
+    font-size: 36px;
+    margin: 38px 0;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.botao button:hover, botao button:focus{
+    box-shadow: inset 0 -3.25em 0 0 #F9FFF9;
+    color: #071D2C;
+    transition: 0.25s;
+    border: 4px solid #071D2C;
+}
+
+.vl{
+    border-left: 5px solid #000928;
+    border-radius: 0 5px 5px 0;
+    height: 70px;
+    background-color: #51B7B8;
+}
+
+.formulario{
+    margin-left: 40px;
+    background-color: #51B7B8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

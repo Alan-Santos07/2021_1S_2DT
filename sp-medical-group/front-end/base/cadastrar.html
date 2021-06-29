@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/cadastro.css">
+    <title>Agendamento</title>
+</head>
+<body>
+    <header>
+        <div class="cabeca">
+            <a href="#" class="logo"> <img class="ibagem" src="./assets/img/logo_com_letras.png" alt="Logo sp medical group"> </a>
+            <a href="#" class="sair">Sair</a>
+            <a href="#" class="listar-cabeca">Listar Consultas</a>
+        </div>
+        <div class="user">
+            <p>Nome de Usuário</p>
+            <img src="./assets/img/user-icon.png" alt="Foto do Usuario">
+        </div>
+    </header>
+    <section class="container">
+
+        <div class="esquerda">
+            <div class="card">
+
+                <div class="titulo">
+                    <h3>Agendar nova Consulta</h3>
+                    <hr>
+                </div>
+
+                <form class="formulario" action="">
+
+                   <div class="campo nome">
+                        <img src="./assets/img/icon.png" alt="">
+                        <div class="vl"></div>
+                        <select class="selecao" name="option">
+                            <option value="" disabled selected><span>Nome do Paciente</span></option>
+                            <option value="1">Alan</option>
+                            <option value="2">Saulo</option>
+                            <option value="3">Caique</option>
+                        </select>
+                        <img id="setinha" src="./assets/img/seta.png" alt="">
+                    </div>
+
+                    <div class="campo especialidade">
+                        <img src="./assets/img/doctor_icon.png" alt="">
+                        <div class="vl"></div>
+                        <select class="selecao" name="option">
+                            <option value="" disabled selected><span class="spam">Especialidade</span></option>
+                            <option value="1">Psícologo</option>
+                            <option value="2">Ortopedista</option>
+                            <option value="3">Cardiologista</option>
+                        </select>
+                        <img id="setinha" src="./assets/img/seta.png" alt="">
+                    </div>
+
+                    <div class="campo medico">
+                        <img src="./assets/img/medico_icone.png" alt="">
+                        <div class="vl"></div>
+                        <select class="selecao" name="option">
+                            <option value="" disabled selected><span class="spam">Médico</span></option>
+                            <option value="1">Luana</option>
+                            <option value="2">Bruno</option>
+                            <option value="3">Lucas</option>
+                        </select>
+                        <img id="setinha" src="./assets/img/seta.png" alt="">
+                    </div>
+                    
+                    <div class="campo data">
+                        <img src="./assets/img/data_icon.png" alt="">
+                        <div class="vl"></div>
+                        <input class="morra" type="date">
+                    </div>
+
+                    <div class="campo hora">
+                        <img src="./assets/img/time_icon.png" alt="">
+                        <div class="vl"></div>
+                        <input class="morra" type="time" min="06:00" max="18:00" required>
+                    </div>
+                    
+                    <div class="botao">
+                        <button type="submit">Agendar nova Consulta</button>    
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="direita">
+            <div class="imagem">
+                <img src="./assets/img/medico_equipes.png" alt="">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

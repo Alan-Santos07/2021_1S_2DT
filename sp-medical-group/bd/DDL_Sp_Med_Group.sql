@@ -16,6 +16,7 @@ CREATE TABLE usuarios
 	   ,idTiposUsuarios INT FOREIGN KEY REFERENCES tiposUsuarios(idTiposUsuarios)
 	   ,email VARCHAR(200) NOT NULL
 	   ,senha VARCHAR(200) NOT NULL
+	   ,nome VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE paciente

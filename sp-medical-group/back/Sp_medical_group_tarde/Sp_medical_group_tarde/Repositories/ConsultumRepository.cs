@@ -79,7 +79,19 @@ namespace Sp_medical_group_tarde.Repositories
 
         public List<Consultum> Listar()
         {
-            return ctx.Consulta.ToList();
+            return ctx.Consulta
+
+                .Include(p => p.IdMedicoNavigation)
+
+                .Include(p => p.IdPacienteNavigation)
+
+                .Include(p => p.IdSituacaoNavigation)
+
+                .Include(p => p.IdMedicoNavigation.IdUsuarioNavigation)
+
+                .Include(p => p.IdPacienteNavigation.IdUsuarioNavigation)
+
+                .ToList();
         }
 
         public List<Consultum> Minhas(int idUsuario)
