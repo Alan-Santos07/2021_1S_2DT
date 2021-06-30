@@ -91,6 +91,8 @@ namespace Sp_medical_group_tarde.Repositories
 
                 .Include(p => p.IdPacienteNavigation.IdUsuarioNavigation)
 
+                .Include(p => p.IdMedicoNavigation.IdEspecialidadeNavigation)
+
                 .ToList();
         }
 

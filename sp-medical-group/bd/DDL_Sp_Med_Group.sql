@@ -70,3 +70,5 @@ CREATE TABLE consulta
 	   ,horaConsulta VARCHAR(200) NOT NULL
 	   ,descricao VARCHAR (200) NOT NULL
 );
+
+DROP DATABASE Medical;
