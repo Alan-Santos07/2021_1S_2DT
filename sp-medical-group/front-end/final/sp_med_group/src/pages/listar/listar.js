@@ -103,6 +103,7 @@ export default class Listar extends Component{
         })
 
         .then(this.buscarTodasConsultas)
+        .then(this.limparCampos)
 
     }
 
@@ -138,7 +139,8 @@ export default class Listar extends Component{
     limparCampos = () => {
         this.setState({
             atualizaDescricao : '',
-            idConsultaSelecionado : 0
+            idConsultaSelecionado : 0,
+            atualizaSituacao : 0
         })
     }
 
