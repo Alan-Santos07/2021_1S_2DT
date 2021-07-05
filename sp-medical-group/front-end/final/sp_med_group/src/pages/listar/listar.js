@@ -17,7 +17,7 @@ export default class Listar extends Component{
 
     buscarSituacoes = () => {
 
-        axios('http://localhost:5000/api/Situacao')
+        axios('http://localhost:5000/api/Consulta/minhas')
 
         .then(resposta => {
 
@@ -28,6 +28,10 @@ export default class Listar extends Component{
             }
         })
         .catch(erro => console.log(erro))
+    }
+
+    listarMinhas = () => {
+        axios('http://localhost:5000/api/Consulta/' + )
     }
 
     // Função que vai listar todas as consultas para o Administrador
