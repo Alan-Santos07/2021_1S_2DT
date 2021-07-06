@@ -117,7 +117,7 @@ namespace Sp_medical_group_tarde.Controllers
             }
         }
 
-        //[Authorize(Roles = "1")]
+        [Authorize(Roles = "1")]
         [HttpPatch("{id}")]
         public IActionResult Patch(int id, Situacao ConsultumPermissao)
         {
@@ -139,7 +139,7 @@ namespace Sp_medical_group_tarde.Controllers
                 });
             }
         }
-        //[Authorize(Roles = "2")]
+        [Authorize(Roles = "2")]
         [HttpPatch("descricao/{id}")]
         public IActionResult UpdateDescricao(int id, Consultum Descricao)
         {

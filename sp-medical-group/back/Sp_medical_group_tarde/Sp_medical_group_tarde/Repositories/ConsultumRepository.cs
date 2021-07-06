@@ -98,17 +98,70 @@ namespace Sp_medical_group_tarde.Repositories
 
         public List<Consultum> Minhas(int idUsuario)
         {
-            return ctx.Consulta
+            Paciente pacienteBuscado = ctx.Pacientes.FirstOrDefault(x => x.IdUsuario == idUsuario);
 
-                .Include(p => p.IdMedicoNavigation)
+            Medico medicoBuscado = ctx.Medicos.FirstOrDefault(x => x.IdUsuario == idUsuario);
 
-                .Include(p => p.IdPacienteNavigation)
+            if (pacienteBuscado != null)
+            {
+                return ctx.Consulta.Where(x => x.IdPaciente == pacienteBuscado.IdPaciente)
 
-                .Include(p => p.IdSituacaoNavigation)
+                    .Include(x => x.IdPacienteNavigation)
 
-                .Where(p => p.IdConsulta == idUsuario)
+                    .Include(x => x.IdMedicoNavigation)
 
-                .ToList();
+                    .Include(x => x.IdSituacaoNavigation)
+
+                    .Include(p => p.IdMedicoNavigation.IdUsuarioNavigation)
+
+                    .Include(x => x.IdMedicoNavigation.IdEspecialidadeNavigation)
+
+                    .Include(x => x.IdPacienteNavigation.IdUsuarioNavigation)
+
+                    .Select(x => new Consultum
+                    {
+                        IdConsulta = x.IdConsulta,
+                        IdMedicoNavigation = x.IdMedicoNavigation,
+                        IdPacienteNavigation = x.IdPacienteNavigation,
+                        IdSituacaoNavigation = x.IdSituacaoNavigation,
+                        Descricao = x.Descricao,
+                        DataConsulta = x.DataConsulta,
+                        HoraConsulta = x.HoraConsulta
+                    })
+
+                    .ToList();
+            }
+
+            if (medicoBuscado != null)
+            {
+                return ctx.Consulta.Include(x => x.IdMedicoNavigation).Where(x => x.IdMedico == medicoBuscado.IdMedico)
+                    .Include(x => x.IdPacienteNavigation)
+
+                    .Include(x => x.IdMedicoNavigation)
+
+                    .Include(x => x.IdSituacaoNavigation)
+
+                    .Include(x => x.IdMedicoNavigation.IdEspecialidadeNavigation)
+
+                    .Include(x => x.IdMedicoNavigation.IdUsuarioNavigation)
+
+                    .Include(x => x.IdPacienteNavigation.IdUsuarioNavigation)
+
+                    .Select(x => new Consultum
+                    {
+                        IdConsulta = x.IdConsulta,
+                        IdMedicoNavigation = x.IdMedicoNavigation,
+                        IdPacienteNavigation = x.IdPacienteNavigation,
+                        IdSituacaoNavigation = x.IdSituacaoNavigation,
+                        Descricao = x.Descricao,
+                        DataConsulta = x.DataConsulta,
+                        HoraConsulta = x.HoraConsulta
+                    })
+
+                    .ToList();
+            }
+
+            return null;
         }
 
         public void AlterStatus(int id, string ConsultumPermissao)  

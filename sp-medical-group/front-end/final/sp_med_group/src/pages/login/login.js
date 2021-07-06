@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { parseJwt, usuarioAutenticado } from '../../services/auth';
 
@@ -28,10 +28,9 @@ export default class Login extends Component{
 
                 console.log('Meu token é: ' + resposta.data.token);
 
-                let base64 = localStorage.getItem('usuario-login').split('.')[1];
-
                 if (parseJwt().role === '1') {
                     this.props.history.push('/listar');
+                    console.log('estou logado: ' + usuarioAutenticado());
                 }
                 else {
                     this.props.history.push('/')

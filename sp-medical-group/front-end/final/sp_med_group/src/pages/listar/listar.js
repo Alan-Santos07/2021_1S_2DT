@@ -1,6 +1,7 @@
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { parseJwt } from '../../services/auth';
 
 export default class Listar extends Component{
     constructor(props){
@@ -15,9 +16,9 @@ export default class Listar extends Component{
         }
     }
 
-    buscarSituacoes = () => {
+    buscarSituacoes = async () => {
 
-        axios('http://localhost:5000/api/Consulta/minhas')
+        axios('http://localhost:5000/api/situacao')
 
         .then(resposta => {
 
@@ -31,7 +32,17 @@ export default class Listar extends Component{
     }
 
     listarMinhas = () => {
-        axios('http://localhost:5000/api/Consulta/' + )
+        axios('http://localhost:5000/api/Consulta/minhas', {
+            headers: {
+                Authorization: "Bearer " + localStorage.getItem("usuario-login"),
+              },
+        })
+        .then((resposta) => {
+            this.setState({ listaConsultas: resposta.data });
+            console.log(this.state.listaConsultas);
+          })
+    
+          .catch((erro) => console.log(erro));
     }
 
     // Função que vai listar todas as consultas para o Administrador
@@ -62,6 +73,8 @@ export default class Listar extends Component{
 
             headers : {
                 "Content-Type" : "application/json",
+                'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
+                
             }
         })
 
@@ -75,7 +88,7 @@ export default class Listar extends Component{
             console.log(erro);
         })
 
-        .then(this.buscarTodasConsultas)
+        .then(this.listarInicial)
 
         .then(this.limparCampos)
     }
@@ -93,6 +106,7 @@ export default class Listar extends Component{
 
             headers : {
                 "Content-Type" : "application/json",
+                'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
             }
         })
 
@@ -106,7 +120,7 @@ export default class Listar extends Component{
             console.log(erro);
         })
 
-        .then(this.buscarTodasConsultas)
+        .then(this.listarInicial)
         .then(this.limparCampos)
 
     }
@@ -133,7 +147,7 @@ export default class Listar extends Component{
 
     componentDidMount(){
         this.buscarSituacoes()
-        this.buscarTodasConsultas()
+        this.listarInicial()
     }
 
     atualizaStateCampo = (campo) => {
@@ -146,6 +160,17 @@ export default class Listar extends Component{
             idConsultaSelecionado : 0,
             atualizaSituacao : 0
         })
+    }
+
+    listarInicial = () => {
+        console.log(parseJwt().role);
+        if (parseJwt().role === "1") {
+            this.buscarTodasConsultas()
+            console.log(this.state.listaConsultas + 'adm')
+        } else {
+            this.listarMinhas()
+            console.log(this.state.listaConsultas + 'resto')
+        }
     }
 
     render(){
@@ -178,8 +203,8 @@ export default class Listar extends Component{
                                             <td>{consulta.dataConsulta}</td>
                                             <td>{consulta.horaConsulta}</td>
                                             <td>{consulta.descricao}</td>
-                                            <td><button onClick={() => this.editarDescricao(consulta)} >Selecionar Descrição</button></td>
-                                            <td><button onClick={() => this.selecionarSituacao(consulta)} >Selecionar Situação</button></td>
+                                            <td><button onClick={() => this.editarDescricao(consulta)} disabled={parseJwt().role === "2" ? '' : 'none' } >Selecionar Descrição</button></td>
+                                            <td><button onClick={() => this.selecionarSituacao(consulta)} disabled={parseJwt().role === "1" ? '' : 'none' } >Selecionar Situação</button></td>
                                         </tr>
                                     )
                                 } )
