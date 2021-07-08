@@ -62,7 +62,9 @@ namespace Sp_medical_group_tarde.Controllers
                 new Claim(ClaimTypes.Role, usuarioBuscado.IdTiposUsuarios.ToString()),
 
                 // Armazena na Claim o tipo de usuário que foi autenticado (Administrador, Médico ou Paciente) de forma personalizada
-                new Claim("role", usuarioBuscado.IdTiposUsuarios.ToString())
+                new Claim("role", usuarioBuscado.IdTiposUsuarios.ToString()),
+
+                new Claim(JwtRegisteredClaimNames.Name, usuarioBuscado.Nome)
             };
 
                 // Define a chave de acesso ao token
