@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Trabalho\\Senai\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj": {}
+    "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj": {}
   },
   "projects": {
-    "D:\\Trabalho\\Senai\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj": {
+    "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Trabalho\\Senai\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
+        "projectUniqueName": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
         "projectName": "Sp_medical_group_tarde",
-        "projectPath": "D:\\Trabalho\\Senai\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
-        "packagesPath": "C:\\Users\\alanc\\.nuget\\packages\\",
-        "outputPath": "D:\\Trabalho\\Senai\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\obj\\",
+        "projectPath": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
+        "packagesPath": "C:\\Users\\44711461817\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\44711461817\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
