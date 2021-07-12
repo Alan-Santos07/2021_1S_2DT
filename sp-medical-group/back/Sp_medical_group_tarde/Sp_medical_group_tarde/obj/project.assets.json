@@ -9079,19 +9079,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\44711461817\\.nuget\\packages\\": {}
+    "C:\\Users\\alanc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
+      "projectUniqueName": "D:\\Trabalho\\Senai\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
       "projectName": "Sp_medical_group_tarde",
-      "projectPath": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
-      "packagesPath": "C:\\Users\\44711461817\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\44711461817\\Documents\\Alan_2_Termo\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\obj\\",
+      "projectPath": "D:\\Trabalho\\Senai\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\Sp_medical_group_tarde.csproj",
+      "packagesPath": "C:\\Users\\alanc\\.nuget\\packages\\",
+      "outputPath": "D:\\Trabalho\\Senai\\2021_1S_2DT\\sp-medical-group\\back\\Sp_medical_group_tarde\\Sp_medical_group_tarde\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\44711461817\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9170,7 +9170,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }
